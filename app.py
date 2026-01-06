@@ -45,6 +45,7 @@ app.layout = html.Div([
     dcc.Store(id="history-store", storage_type="session"),
     dcc.Store(id="data-store", storage_type="session"),
     dcc.Store(id="step-store", data=0, storage_type="session"),
+    dcc.Interval(id="timer", interval=300, disabled=True),
     html.Nav(
         className="navbar",
         children=[

@@ -137,9 +137,7 @@ layout = html.Div([
 
     html.Button("▶ Play", id="play"),
     html.Button("⏸ Pause", id="pause"),
-
-    dcc.Interval(id="timer", interval=150, disabled=True),
-
+    
     dcc.Graph(
         id="regression",
         figure=empty_dark_figure(height=350),
