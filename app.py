@@ -18,6 +18,29 @@ app = dash.Dash(
 
 server = app.server
 
+app.clientside_callback(
+    """
+    function(n_intervals, step, store) {
+        if (!store || !store.history) {
+            return step || 0;
+        }
+
+        const maxStep = store.history.length - 1;
+
+        if (step === null || step === undefined) {
+            return 0;
+        }
+
+        return Math.min(step + 1, maxStep);
+    }
+    """,
+    Output("step-store", "data"),
+    Input("timer", "n_intervals"),
+    State("step-store", "data"),
+    State("history-store", "data"),
+)
+
+
 app.layout = html.Div([
     dcc.Store(id="history-store", storage_type="session"),
     dcc.Store(id="data-store", storage_type="session"),
