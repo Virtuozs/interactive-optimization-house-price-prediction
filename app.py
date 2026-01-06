@@ -1,5 +1,5 @@
 import dash
-from dash import html, dcc
+from dash import html, dcc, Output, State, Input
 from callbacks import register_callbacks
 from dotenv import load_dotenv
 import os
