@@ -114,30 +114,30 @@ def register_callbacks(app):
             "y_std": float(y_raw.std()),
         }
 
-    # @app.callback(
-    #     Output("step-store", "data"),
-    #     Input("timer", "n_intervals", allow_optional=True),
-    #     Input("method", "value", allow_optional=True),
-    #     Input("lr", "value", allow_optional=True),
-    #     Input("iters", "value", allow_optional=True),
-    #     State("step-store", "data"),
-    #     State("history-store", "data"),
-    # )
-    # def control_step(n_intervals, method, lr, iters, step, history):
+    @app.callback(
+        Output("step-store", "data"),
+        Input("timer", "n_intervals", allow_optional=True),
+        Input("method", "value", allow_optional=True),
+        Input("lr", "value", allow_optional=True),
+        Input("iters", "value", allow_optional=True),
+        State("step-store", "data"),
+        State("history-store", "data"),
+    )
+    def control_step(n_intervals, method, lr, iters, step, history):
 
-    #     ctx = callback_context
-    #     if not ctx.triggered:
-    #         return 0
+        ctx = callback_context
+        if not ctx.triggered:
+            return 0
 
-    #     trigger = ctx.triggered_id
+        trigger = ctx.triggered_id
 
-    #     if trigger in {"method", "lr", "iters"}:
-    #         return 0
+        if trigger in {"method", "lr", "iters"}:
+            return 0
 
-    #     if trigger == "timer" and history and "history" in history:
-    #         return min(step + 1, len(history["history"]) - 1)
+        if trigger == "timer" and history and "history" in history:
+            return min(step + 1, len(history["history"]) - 1)
         
-    #     return step
+        return step
 
     @app.callback(
         Output("regression", "figure"),

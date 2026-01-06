@@ -34,14 +34,6 @@ app.layout = html.Div([
     dash.page_container
 ])
 
-app.clientside_callback(
-    "dash_clientside.animation.step_forward",
-    Output("step-store", "data"),
-    Input("timer", "n_intervals"),
-    State("step-store", "data"),
-    State("history-store", "data"),
-)
-
 register_callbacks(app)
 
 if __name__ == "__main__":
