@@ -2,6 +2,12 @@ import dash
 from dash import html, dcc
 from callbacks import register_callbacks
 
+load_dotenv()
+
+APP_ENV = os.getenv("APP_ENV", "production").lower()
+DEBUG = os.getenv("APP_DEBUG", "False") == "True"
+PORT = int(os.getenv("APP_PORT", 8050))
+
 app = dash.Dash(
     __name__,
     use_pages=True,
@@ -28,4 +34,8 @@ app.layout = html.Div([
 register_callbacks(app)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run_server(
+        host="0.0.0.0",
+        port=PORT,
+        debug=DEBUG
+    )
