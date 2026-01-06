@@ -2,6 +2,7 @@ import dash
 from dash import html, dcc
 from callbacks import register_callbacks
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
