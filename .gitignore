@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+
+# Dash / Python caches
+.cache/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

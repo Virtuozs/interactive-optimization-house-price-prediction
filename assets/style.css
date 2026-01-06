@@ -1,0 +1,150 @@
+
+html, body {
+    background-color: #0f1117;
+    color: #e6e6e6;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* App container */
+#_dash-app-content {
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #1f6feb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-right: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #388bfd;
+}
+
+/* Inputs */
+input {
+    background-color: #161b22;
+    color: #e6e6e6;
+    border: 1px solid #30363d;
+    padding: 6px;
+    margin-right: 6px;
+    border-radius: 6px;
+}
+
+/* Dropdown */
+.Select-control {
+    background-color: #161b22 !important;
+    color: #e6e6e6 !important;
+    border-color: #30363d !important;
+}
+
+.Select-menu-outer {
+    background-color: #161b22 !important;
+    color: #e6e6e6 !important;
+}
+
+/* Slider */
+.rc-slider-track {
+    background-color: #1f6feb;
+}
+
+.rc-slider-handle {
+    border-color: #1f6feb;
+}
+
+/* DataTable */
+.dash-table-container {
+    background-color: #0f1117;
+}
+
+.dash-spreadsheet {
+    background-color: #0f1117 !important;
+    color: #e6e6e6 !important;
+}
+
+.dash-spreadsheet-container th {
+    background-color: #161b22 !important;
+    color: #ffffff !important;
+}
+
+/* Section spacing */
+.section {
+    margin-bottom: 25px;
+}
+
+/* Divider */
+hr {
+    border: 0;
+    height: 1px;
+    background: #30363d;
+    margin: 20px 0;
+}
+
+/* Control Labels */
+.controls {
+    margin-bottom: 20px;
+}
+
+.control-group {
+    margin-bottom: 18px;
+}
+
+.control-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #c9d1d9;
+    font-weight: 500;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    padding: 12px 20px;
+    margin-bottom: 20px;
+
+    background-color: #161b22;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+}
+
+/* Links */
+.nav-link {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 6px 12px;
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+    background-color: #1f6feb;
+    color: #ffffff;
+}
+
+/* Active page highlight*/
+.nav-link.active {
+    background-color: #238636;
+    color: #ffffff;
+}
